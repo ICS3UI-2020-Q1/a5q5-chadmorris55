@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * fins the factorial of a number
+ * @Chad 
  */
 public class Main {
 
@@ -9,7 +10,15 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+    // creates Scanner for user input
+    Scanner input = new Scanner(System.in);
+    //asks user for number and records it 
+    System.out.println("Please enter an integer to calculate the factorial of");
+    int goal = input.nextInt();
+    int total = 1;
+    for (int count = 1; count <= goal; count++){
+      total = total * count;
+      }
+    System.out.println(goal + "! = " + total);
   }
 }
